@@ -7,3 +7,10 @@ data.Sales = [re.sub('[$,]','',x) for x in data.Sales]
 data.Profit = pd.to_numeric(data.Profit)
 data.Sales = pd.to_numeric(data.Sales)
 
+def change_to_numeric(data):
+	
+    data.Profit = [re.sub('[$,]','',x) for x in data.Profit]
+    data.Sales = [re.sub('[$,]','',x) for x in data.Sales]
+    data.Profit = pd.to_numeric(data.Profit)
+    data.Sales = pd.to_numeric(data.Sales)
+    return data
